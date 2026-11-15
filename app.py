@@ -236,7 +236,7 @@ async def owner(interaction: discord.Interaction, user: discord.Member, uid: str
             value="Use `/extend` to add more days or `/remove` to delete this UID first.",
             inline=False
         )
-        embed.set_footer(text="AXB PREMIUM SECURITY")
+        embed.set_footer(text="AXB COMMUNITY")
         
         await interaction.response.send_message(embed=embed)
         return
@@ -267,7 +267,7 @@ async def owner(interaction: discord.Interaction, user: discord.Member, uid: str
     embed.add_field(name="📅 ACTIVE DAYS", value=f"{days} DAYS", inline=True)
     embed.add_field(name="⏰ EXPIRES ON", value=formatted_expire, inline=True)
 
-    embed.set_footer(text="AXB PREMIUM SECURITY")
+    embed.set_footer(text="AXB COMMUNITY")
 
     await interaction.response.send_message(embed=embed)
     await send_log(embed)
@@ -307,7 +307,7 @@ async def uid_add(interaction: discord.Interaction, uid: str):
             value="Use `/extend` to add more days or `/remove` to delete this UID first.",
             inline=False
         )
-        embed.set_footer(text="AXB PREMIUM SECURITY")
+        embed.set_footer(text="AXB COMMUNITY")
         
         await interaction.response.send_message(embed=embed)
         return
@@ -338,7 +338,7 @@ async def uid_add(interaction: discord.Interaction, uid: str):
     embed.add_field(name="📅 ACTIVE DAYS", value="1 DAY", inline=True)
     embed.add_field(name="⏰ EXPIRES ON", value=formatted_expire, inline=True)
 
-    embed.set_footer(text="AXB PREMIUM SECURITY")
+    embed.set_footer(text="AXB COMMUNITY")
 
     await interaction.response.send_message(embed=embed)
     await send_log(embed)
@@ -402,7 +402,7 @@ async def extend(interaction: discord.Interaction, uid: str, days: int):
         inline=True
     )
 
-    embed.set_footer(text="AXB PREMIUM SECURITY")
+    embed.set_footer(text="AXB COMMUNITY")
 
     await interaction.response.send_message(embed=embed)
     await send_log(embed)
@@ -464,7 +464,7 @@ async def status(interaction: discord.Interaction, uid: str):
         inline=False
     )
 
-    embed.set_footer(text="AXB PREMIUM SECURITY")
+    embed.set_footer(text="AXB COMMUNITY")
 
     await interaction.response.send_message(embed=embed)
 
@@ -513,7 +513,7 @@ async def remove(interaction: discord.Interaction, uid: str):
         inline=False
     )
 
-    embed.set_footer(text="AXB PREMIUM SECURITY")
+    embed.set_footer(text="AXB COMMUNITY")
 
     await interaction.response.send_message(embed=embed)
     await send_log(embed)
@@ -647,7 +647,7 @@ async def help_command(interaction: discord.Interaction):
     for cmd, desc in commands_list.items():
         embed.add_field(name=cmd, value=desc, inline=False)
 
-    embed.set_footer(text="AXB PREMIUM SECURITY | Admin Only")
+    embed.set_footer(text="AXB OFFICIAL | Admin Only")
 
     await interaction.response.send_message(embed=embed)
 
